@@ -1,31 +1,55 @@
 # My Resume
 
 1. Fork and Clone this repo
+2. run `npm install` then `npm start`
 
-# [Start Bootstrap - Resume](https://startbootstrap.com/template-overviews/resume/)
+# Github API
 
-[Resume](https://startbootstrap.com/template-overviews/resume/) is a resume and CV theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a fixed sidebar with content sections to build a simple, yet elegant resume.
+Github provides an **API** that provides a way for developers to retrieve information about in **JSON** format. We will spend most of our time using the `repos` **endpoint** which GETs the repos (repositories) of a specified user.
 
+The documentation for the `repos` endpoint is available on: [https://developer.github.com/v3/repos/](https://developer.github.com/v3/repos/)
 
-## Download and Installation
+- Try to call this URI on the browser `https://api.github.com/users/codeyourfuture/repos`. What do you get back? Try changing *codeyourfuture* to your Github username, and see if you get back your list of repositories.
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/resume/)
-* Install via npm: `npm i startbootstrap-resume`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-resume.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-resume)
+**Now to the requirements.**
+
+# My Github Page
+## Requirement 1:
+```
+**Given** I am on the Resume site
+**When** I click on `My Github` link
+**Then** I should be presented with a list of repositories for my Github user
+```
+
+## Requirement 2:
+```
+**Given** I am on the Resume site
+**When** I click on `My Github` link
+**Then** I should be shown the number of repos in my Github account (in place of the `X`)
+```
+
+## Requirement 3:
+```
+**Given** I am on the `My Github` page
+**When** I am presented a list of my Repos
+**Then** each link should have 
+```
+
+The page `my-github.html` under the folder *pages* has a reference to the script `my-github.js` and the CSS file `my-github.css`. These are the files that you will need to change for this task.
+
+# About the Theme of this site
+
+This theme is from [Start Bootstrap - Resume](https://startbootstrap.com/template-overviews/resume/).
+
+You can check [Start Bootstrap](https://startbootstrap.com/) to get more free open-source themes.
+
 
 ## Usage
 
-### Basic Usage
+After cloning the repo, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved.
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
-
-### Advanced Usage
-
-After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
-
-#### Gulp Tasks
+## Gulp Tasks
+These are advanced tasks that you don't need to know about for now.
 
 - `gulp` the default task that builds everything
 - `gulp dev` browserSync opens the project in your default browser and live reloads when changes are made
@@ -34,6 +58,6 @@ After installation, run `npm install` and then run `gulp dev` which will open up
 - `gulp minify-js` minifies the themes JS file
 - `gulp copy` copies dependencies from node_modules to the vendor directory
 
-## Copyright and License for the theme
+### Copyright and License for the theme
 
 Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-resume/blob/gh-pages/LICENSE) license.

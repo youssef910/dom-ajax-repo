@@ -14,60 +14,67 @@ The documentation for the `repos` endpoint is available on: [https://developer.g
 
 **Now to the requirements.**
 
-# Task 1: My Github Page
-## Requirement 1:
-**Given** I am on the Resume site
-
-**When** I click on `My Github` link
-
+## Part 1: My Github Page
+### Requirement 1: Show my Repos
+**Given** I am on the Resume site  
+**When** I click on `My Github` link  
 **Then** I should be presented with a list of repositories for my Github user
 
+### Requirement 2: Add a link to my repo
+**Given** I am on the `My Github` page  
+**When** I am presented a list of my Repos  
+**Then** each repo should have a link to go to the Github page
 
-## Requirement 2:
-**Given** I am on the Resume site
-
-**When** I click on `My Github` link
-
+### Requirement 3: Display the number of Repos
+**Given** I am on the Resume site  
+**When** I click on `My Github` link  
 **Then** I should be shown the number of repos in my Github account (in place of the `X`)
-
-## Requirement 3:
-**Given** I am on the `My Github` page
-
-**When** I am presented a list of my Repos
-
-**Then** each link should have 
 
 > The page `my-github.html` under the folder *pages* has a reference to the script `my-github.js` and the CSS file `my-github.css`. These are the files that you will need to change for these tasks.
 
-# Task: Show My Pull Requests submitted against js-exercises
-GET https://api.github.com/repos/codeyourfuture/js-exercises/pulls
+## Part 2: Show Pull Requests submitted against js-exercises
+GET [https://api.github.com/repos/codeyourfuture/js-exercises/pulls](https://api.github.com/repos/codeyourfuture/js-exercises/pulls)
 
 hint: This request lists all the pull requests against js-exercises. How can you show only the ones that related to your Github usernam (How can you _filter_ the list)
 
-# Task 2: My Friends' Github Search page
+### Requirement 4: Show ALL Pull Requests
+**Given** I am on the Resume site  
+**When** I click on `My Pull Requests` page  
+**Then** I should be shown a list of all *Pull Requests title* as a link  
+**AND** the link should take me to the Pull Request on Github (use `html_url` property)
 
-# Task 3: Show Details of one repo when Clicking on it
+### Requirement 5: Show Only My Pull Requests
 
+Update the previous requirement to only show your Pull Requests. Look at the `JSON` response and think how you can _filter_ the response
 
-# Task x: Random API
+### Requirement 6: Search for my friend's Pull Requests
+
+Update the previous page to add a `Search input`. This allows the user  to enter a Github user, and while they are searching, we should _filter_ the displayed list of Pull  Requests to only show that user's Pull Requests.
+
+**Given** I am on the the Pull Requests page  
+**When** I enter a *github user* in the *search box*  
+**Then** I should be shown a list of *Pull Requests title* for that User only  
+
+> The file `pull-requests.js` is where you need to write the JavaScript to peform these requirements.
+
+## Part 3: Update My Github Page to show other Github user's repos
+
+### Requirement 7: Display someone else's repos in My Github
+
+Update the **My Github** page to add a `Search input` and a `Search button`. This allows the user  to enter a Github user, and when they click **Search** then the page should display The  Pull Requests for that user.
+
+**Given** I am on *My Github* page  
+**When** I enter a *github user* in the *search box*  
+**And** I click Enter  
+**Then** I should be shown a list of the  repos for that User  
+
+(stretch goal: if the search box is empty then it should default to my User)
+
+> You will need to update the code in `my-github.js` to finish these tasks.
+
+## Bonus Task: Random API
 Pick any random API from https://github.com/toddmotto/public-apis (**only those that don't require authentication (have Auth No)**) and create a page to use the API
 
-# About the Theme of this site
+Some ideas include [The  jokes API](https://github.com/15Dkatz/official_joke_api) to get random programming jokes, or the [Open Library API](https://openlibrary.org/developers/api) to search and retrieve information about Books, or [Wordnik](http://developer.wordnik.com/docs.html) to get definitions and example sentences for words, or getting [information about food and recipes](https://github.com/toddmotto/public-apis#food--drink) from a variety of APIs etc...
 
-This theme is from [Start Bootstrap - Resume](https://startbootstrap.com/template-overviews/resume/).
-
-You can check [Start Bootstrap](https://startbootstrap.com/) to get more free open-source themes.
-
-## Gulp Tasks
-These are advanced commands that you don't need to know about for now, but if you're curious, then google _gulp_, _sass_ and _js/css minification_.
-
-- `gulp` the default task that builds everything
-- `gulp dev` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp sass` compiles SCSS files into CSS
-- `gulp minify-css` minifies the compiled CSS file
-- `gulp minify-js` minifies the themes JS file
-- `gulp copy` copies dependencies from node_modules to the vendor directory
-
-### Copyright and License for the theme
-
-Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-resume/blob/gh-pages/LICENSE) license.
+Make sure  to select an API that does not require Authentication, read its documentation for use with HTTP and to get the response in `JSON`.

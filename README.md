@@ -33,6 +33,12 @@ The documentation for the `repos` endpoint is available on: [https://developer.g
 
 For the above requirements, you need to use the API:
 
+> GET https://api.github.com/users/*YOUR GITHUB USERNAME*/repos
+
+Where do I write the code for Part 1 requirements?
+
+> Under the folder *pages* there is the HTML page `my-github.html`. Inside this file there are references to the script `my-github.js` and the CSS file `my-github.css`. These are the files that you will need to change for Part 1 tasks.
+
 ![tasks 1-3 demo](./homework_assets/tasks1-3demo.png)
 
 ## Part 2: Show Pull Requests submitted against js-exercises
@@ -40,12 +46,6 @@ For the above requirements, you need to use the API:
 GET [https://api.github.com/repos/codeyourfuture/js-exercises/pulls](https://api.github.com/repos/codeyourfuture/js-exercises/pulls)
 
 For the below 3 tasks, you'll need to work in: `pull-requests.html` & `pull-requests.js`
-
-> GET https://api.github.com/users/*YOUR GITHUB USERNAME*/repos
-
-Where do I write the code for Part 1 requirements?
-
-> Under the folder *pages* there is the HTML page `my-github.html`. Inside this file there are references to the script `my-github.js` and the CSS file `my-github.css`. These are the files that you will need to change for Part 1 tasks.
 
 ### Requirement 4: Show ALL Pull Requests
 **Given** I am on the Resume site  

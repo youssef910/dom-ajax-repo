@@ -32,10 +32,14 @@ The documentation for the `repos` endpoint is available on: [https://developer.g
 
 > The page `my-github.html` under the folder *pages* has a reference to the script `my-github.js` and the CSS file `my-github.css`. These are the files that you will need to change for these tasks.
 
+![tasks 1-3 demo](./homework_assets/tasks1-3demo.png)
+
 ## Part 2: Show Pull Requests submitted against js-exercises
+**The API**: 
 GET [https://api.github.com/repos/codeyourfuture/js-exercises/pulls](https://api.github.com/repos/codeyourfuture/js-exercises/pulls)
 
-hint: This request lists all the pull requests against js-exercises. How can you show only the ones that related to your Github usernam (How can you _filter_ the list)
+For the below 3 tasks, you'll need to work in: `pull-requests.html` & `pull-requests.js`
+
 
 ### Requirement 4: Show ALL Pull Requests
 **Given** I am on the Resume site  
@@ -55,7 +59,7 @@ Update the previous page to add a `Search input`. This allows the user  to enter
 **When** I enter a *github user* in the *search box*  
 **Then** I should be shown a list of *Pull Requests title* for that User only  
 
-> The file `pull-requests.js` is where you need to write the JavaScript to peform these requirements.
+![task 6 demo](./homework_assets/task6demo.png)
 
 ## Part 3: Update My Github Page to show other Github user's repos
 
@@ -70,7 +74,9 @@ Update the **My Github** page to add a `Search input` and a `Search button`. Thi
 
 (stretch goal: if the search box is empty then it should default to my User)
 
-> You will need to update the code in `my-github.js` to finish these tasks.
+> You will need to update the code in `my-github.js` to finish this final task.
+
+![task 7 demo](./homework_assets/task7demo.png)
 
 ## Bonus Task: Random API
 Pick any random API from https://github.com/toddmotto/public-apis (**only those that don't require authentication (have Auth No)**) and create a page to use the API

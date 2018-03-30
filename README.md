@@ -33,14 +33,19 @@ The documentation for the `repos` endpoint is available on: [https://developer.g
 
 For the above requirements, you need to use the API:
 
+![tasks 1-3 demo](./homework_assets/tasks1-3demo.png)
+
+## Part 2: Show Pull Requests submitted against js-exercises
+**The API**: 
+GET [https://api.github.com/repos/codeyourfuture/js-exercises/pulls](https://api.github.com/repos/codeyourfuture/js-exercises/pulls)
+
+For the below 3 tasks, you'll need to work in: `pull-requests.html` & `pull-requests.js`
+
 > GET https://api.github.com/users/*YOUR GITHUB USERNAME*/repos
 
 Where do I write the code for Part 1 requirements?
 
 > Under the folder *pages* there is the HTML page `my-github.html`. Inside this file there are references to the script `my-github.js` and the CSS file `my-github.css`. These are the files that you will need to change for Part 1 tasks.
-
-
-## Part 2: Show Pull Requests submitted against js-exercises
 
 ### Requirement 4: Show ALL Pull Requests
 **Given** I am on the Resume site  
@@ -59,6 +64,8 @@ Add a `Search input` on the `My Pull Requests` page. This allows the user to ent
 **Given** I am on the the Pull Requests page  
 **When** I enter a *github user* in the *search box*  
 **Then** I should be shown a list of *Pull Requests title* for that User only  
+
+![task 6 demo](./homework_assets/task6demo.png)
 
 For the above requirements, you need to use the API:
 
@@ -82,6 +89,10 @@ Update the **My Github** page to add a `Search input` and a `Search button`. Thi
 **Then** I should be shown a list of the repos for that user  
 
 (stretch goal: if the search box is empty then it should default to my User)
+
+> You will need to update the code in `my-github.js` to finish this final task.
+
+![task 7 demo](./homework_assets/task7demo.png)
 
 For the above requirements, you need to use the API:
 

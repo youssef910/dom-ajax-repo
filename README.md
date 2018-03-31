@@ -26,6 +26,9 @@ The documentation for the `repos` endpoint is available on: [https://developer.g
 **When** I am presented a list of my Repos  
 **Then** each repo should have a link to go to the Github page
 
+> **Hint:** If you're unsure about how to create a link from JavaScript, then check [this StackOverflow post](https://stackoverflow.com/questions/37472635/javascript-dom-add-href-and-a-link) that has the answer.
+
+
 ### Requirement 3: Display the number of Repos
 **Given** I am on the Resume site  
 **When** I click on `My Github` link  
@@ -47,6 +50,12 @@ GET [https://api.github.com/repos/codeyourfuture/js-exercises/pulls](https://api
 
 For the below 3 tasks, you'll need to work in: `pull-requests.html` & `pull-requests.js`
 
+> First, you need to link the `html` and `JavaScript` together. Go to the `html` page and add a script tag `<script src="../js/pull-requests.js"></script>`
+
+Where do I write the code for Part 2 requirements?
+
+> The file `pull-requests.js` (that you just linked) is where you need to write the JavaScript to peform these requirements.
+
 ### Requirement 4: Show ALL Pull Requests
 **Given** I am on the Resume site  
 **When** I click on `Pull Requests` link  
@@ -67,15 +76,21 @@ Add a `Search input` on the `My Pull Requests` page. This allows the user to ent
 
 ![task 6 demo](./homework_assets/task6demo.png)
 
+> **Hint:** This code below listens to `keyup` event (The keyup event is fired when a key is released) and gets the last value from `event` parameter
+```javascript
+// input is a DOM element we already have using "querySelector"
+input.addEventListener('keyup', function(event) {
+  const value = event.target.value
+  console.log(value)
+  // "value" will be the last value of the input field, and will be updated everytime the user types a new letter
+})
+
+```
 For the above requirements, you need to use the API:
 
 > GET [https://api.github.com/repos/codeyourfuture/js-exercises/pulls](https://api.github.com/repos/codeyourfuture/js-exercises/pulls)
 
 > hint: This request lists all the pull requests against js-exercises. How can you show only the ones that related to your Github username (How can you _filter_ the list).
-
-Where do I write the code for Part 2 requirements?
-
-> The file `pull-requests.js` is where you need to write the JavaScript to peform these requirements.
 
 ## Part 3: Update My Github Page to show other Github user's repos
 
